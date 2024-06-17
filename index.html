@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Declaração do tipo de documento e definição do idioma como português do Brasil -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Marco Andrade</title>
+    <meta charset="UTF-8"> <!-- Configuração de codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração para tornar o site responsivo -->
+    <title>Portfolio Marco Andrade</title> <!-- Título da página -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo de estilos CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Link para o CSS de ícones da biblioteca Boxicons -->
 </head>
 <body>
-    <p> MARCAO KK</p>
+
+    <header class="header"> <!-- Cabeçalho do site -->
+        <a href="home" class="logo">Virtual <!-- Link para a seção "home" com classe "logo" -->
+        <span>Portfolio</span></a> <!-- Texto do logo com a palavra "Portfolio" destacada -->
+
+        <i class='bx bx-menu' id="menu-icon"></i> <!-- Ícone de menu para navegação responsiva -->
+
+        <nav class="navbar"> <!-- Barra de navegação -->
+            <a href="#home" class="active">Home</a> <!-- Link para a seção "home" com classe "active" -->
+            <a href="#Education">Education</a> <!-- Link para a seção "Education" -->
+            <a href="#services">Services</a> <!-- Link para a seção "services" -->
+            <a href="#testimonials">Testimonials</a> <!-- Link para a seção "testimonials" -->
+            <a href="#contact">Contact</a> <!-- Link para a seção "contact" -->
+        </nav>
+    </header>
+
+    <section class="home" id="home"> <!-- Seção "home" com id "home" -->
+        <div class="home-content"> <!-- Div para conteúdo da seção "home" -->
+            <h1>Hi, It's <span>Marco Andrade</span> here!</h1> <!-- Cabeçalho principal com destaque no nome -->
+            <h3 class="text-animation">Physics Engineering student, graduating at <span>UFRGS</span> - Universidade Federal do Rio Grande do Sul, Brasil.</h3> <!-- Cabeçalho secundário com animação de texto -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime natus aut aperiam cumque? Maxime, in doloribus? Earum dolore atque explicabo labore ea praesentium aliquam eum commodi error, fugit repudiandae aperiam!</p> <!-- Parágrafo de texto exemplo -->
+
+            <div class="social-icons"> <!-- Div para ícones de redes sociais -->
+                <a href="#"><i class='bx bxl-linkedin'></i></a> <!-- Link para LinkedIn com ícone -->
+                <a href="#"><i class='bx bxl-github' ></i></a> <!-- Link para GitHub com ícone -->
+            </div>
+
+            <div class="btn-group"> <!-- Div para grupo de botões -->
+                <a href="#" class="btn">Hire</a> <!-- Botão com texto "Hire" -->
+                <a href="#contact" class="btn">Contact</a> <!-- Botão que leva à seção "contact" -->
+             </div>
+        </div>
+        <div class="home-img"> <!-- Div para imagem da seção "home" -->
+            <img src="marco2.jpg" alt=""> <!-- Imagem com fonte "marco2.jpg" -->
+        </div>
+    </section>
+
+    <script src="script.js"></script> <!-- Link para o arquivo de script JavaScript -->
+    
 </body>
 </html>
