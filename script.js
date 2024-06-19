@@ -38,3 +38,4 @@ menuIcon.onclick = () => {
     // Alterna a classe 'active' na barra de navegação
     navbar.classList.toggle('active');
 };
+

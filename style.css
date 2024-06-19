@@ -18,7 +18,7 @@
     --main-color: #40ffdcb3; /* Cor principal */
 }
 
-html {
+html { 
     /* Define o tamanho da fonte base e oculta a rolagem horizontal */
     font-size: 60%;
     overflow-x: hidden;
@@ -134,7 +134,7 @@ span {
        cursor e transição */
     position: relative;
     top: 3rem;
-    width: 32vw;
+    width: 25vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -598,6 +598,18 @@ span {
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
     }
+    .service-info p{
+        font-size: 1.2rem;
+        font-weight: 600;
+        max-height: 100px;
+        line-height: 1.7;
+        margin: auto;
+    }
+    .service-info h4{
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 2;
+    }
 }
 @media(max-width:991px){
     header{
@@ -631,6 +643,18 @@ span {
     }
     .footer{
         padding: 2rem 3%;
+    }
+    .service-info p{
+        font-size: 1.3rem;
+        font-weight: 600;
+        max-height: 100px;
+        line-height: 1.7;
+        margin: auto;
+    }
+    .service-info h4{
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 2;
     }
 }
 @media(max-width:895px){
@@ -682,5 +706,12 @@ span {
     }
     .services-container{
         grid-template-columns: repeat(1,1fr);
+    }
+    .service-info p{
+        font-size: 1.3rem;
+        font-weight: 600;
+        max-height: 100px;
+        line-height: 1.7;
+        margin: auto;
     }
 }

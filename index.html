@@ -30,17 +30,17 @@
             <p>who am i? well, I'm studying Engineering Physics at the Federal University of Rio Grande do Sul (UFRGS) - Brazil, certified professional IBM IT Support with 3 years of experience in the field, I work with technical support and cloud solutions, improving my knowledge about cybersecurity, Linux systems, and networks. I am constantly learning and seeking to improve my skills in new areas like developing in new languages, and most recently i've been studying quantum computing related fields, I'm passionate about engineering and innovation.</p> <!-- Parágrafo de texto exemplo -->
 
             <div class="social-icons"> <!-- Div para ícones de redes sociais -->
-                <a href="#"><i class='bx bxl-linkedin'></i></a> <!-- Link para LinkedIn com ícone -->
-                <a href="#"><i class='bx bxl-github' ></i></a> <!-- Link para GitHub com ícone -->
+                <a href="https://www.linkedin.com/in/marcoandrade8"><i class='bx bxl-linkedin'></i></a> <!-- Link para LinkedIn com ícone -->
+                <a href="https://github.com/mrcandrade"><i class='bx bxl-github' ></i></a> <!-- Link para GitHub com ícone -->
             </div>
 
             <div class="btn-group"> <!-- Div para grupo de botões -->
-                <a href="#" class="btn">Hire</a> <!-- Botão com texto "Hire" -->
+                <a href="https://wa.me/54981359753" class="btn">Hire</a> <!-- Botão com texto "Hire" -->
                 <a href="#contact" class="btn">Contact</a> <!-- Botão que leva à seção "contact" -->
              </div>
         </div>
         <div class="home-img"> <!-- Div para imagem da seção "home" -->
-            <img src="marco2.jpg" alt=""> <!-- Imagem com fonte "marco2.jpg" -->
+            <img src="Imagem do WhatsApp de 2024-06-19 à(s) 12.53.32_d170e797.jpg" alt=""> <!-- Imagem com fonte "marco2.jpg" -->
         </div>
     </section>
 
@@ -135,7 +135,7 @@
     <section class="testimonials" id="testimonials">
 
         <div class="testimonials-box">
-           <h2 class="heading">knowledge</h2>
+           <h2 class="heading">Knowledge</h2>
         
             <div class="wrapper">
 
@@ -168,30 +168,53 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="">
+        <form onsubmit="sendEmail(); return false;">
             <div class="input-group">
-
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" id="fullName" placeholder="Full Name">
+                    <input type="email" id="email" placeholder="Email">
                 </div>
 
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="number" id="phoneNumber" placeholder="Phone Number">
+                    <input type="text" id="subject" placeholder="Subject">
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="" placeholder="Your Message"></textarea>
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
         </form>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "contactmarcoandrade@gmail.com",
+                Password : "fA!+S58Y&rfPqSB",
+                To : "contactmarcoandrade@gmail.com",
+                From : document.getElementById("email").value,
+                Subject : subject,
+                Body : `Name: ${fullName} <br> Email: ${email} <br> Phone: ${phoneNumber} <br> Message: ${message}`
+            }).then(
+                message => alert("Mail sent successfully")
+            ).catch(
+                error => alert("Failed to send email: " + error)
+            );
+        }
+    </script>
     
     <footer class="footer">
         <div class="social">
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.linkedin.com/in/marcoandrade8"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/mrcandrade"><i class='bx bxl-github' ></i></a>
         </div>
 
         <ul class="list">
